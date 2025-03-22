@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #2B2B2B;
+    overflow-x: hidden;
+}
+
+#root{
+    width: 100vw;
+    font-family: "Jersey 25", sans-serif;
+    user-select: none;
+}
+
+/* Estilo Inicial */
+.Div-dos-Cards{
+    margin: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+/* Estilo Card */
+.Div-Card{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+}
+
+.Card-Image{
+    max-width: 17rem;
+    min-width: 17rem;
+    max-height: 25rem;
+    min-height: 25rem;
+}
+
+.Div-Card-Text{
+    background-color: #B8FF92;
+    text-align: center;
+    border-radius: 0 0 1rem 1rem;
+}
+
+.Nome-Jogo{
+    color: #0A7600;
+    font-size: 1.6rem;
+}
+.Download{
+    color: #2B2B2B;
+    font-size: 1.4rem;
+    cursor: pointer;
+} 
+
+/* Estilo Cadastro */
+.container-Cadastro{
+    width: 100vw;
+    height: 100vh;
+    margin-top: 10rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.Div-Jogo{
+    display: flex;
+    flex-direction: column;
+}
+
+label{
+    color: #fff;
+    font-size: 1.5rem;
+}
+input{
+    background: none;
+    border: #00FF2F solid 0.1rem;
+    color: #fff;
+    width: 30rem;
+    height: 2rem;
+    outline: none;
+}
+
+.Btn-Salvar{
+    font-family: "Jersey 25", sans-serif;
+    font-size: 1.6rem;
+    cursor: pointer;
+    border: none;
+    color: #000;
+    background-color: #fff;
+    width: 15rem;
+    height: 2.5rem;
+    border-radius: 1.5rem;
+}
+.Btn-Salvar{
+    background-color: #fff;
+    transition: 1s;
+}
+
+/* Estilo NavBar*/
+.Div-Navbar{
+    width: 100vw;
+    height: 6rem;
+    background-color: #BCFFC8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Titulo-KOXS{
+    height: 9rem;
+    font-size: 2rem;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.Btn-cadastrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    cursor: pointer;
+    width: 10rem;
+    height: 100%;
+    margin-right: 2rem;
+
+    background-color: #BCFFC8;
+    color: #000;
+    border: none;
+}
+.Btn-cadastrar:hover{
+    background-color: #fff;
+    transition: 1s;
+}
