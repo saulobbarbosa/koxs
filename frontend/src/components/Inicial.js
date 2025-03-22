@@ -20,13 +20,11 @@ export default function Inicial() {
     return (
         <div>
             <div className="Div-dos-Cards">
-                {jogos.length > 0 ? (
+                {
                     jogos.map(jogo => (
                         <Card key={jogo.id} id={jogo.id} nome={jogo.nome} imagem={jogo.cam_img} />
                     ))
-                ) : (
-                    <p>Nenhum jogo encontrado</p>
-                )}
+                }
             </div>
         </div>
     );
