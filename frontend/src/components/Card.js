@@ -34,7 +34,7 @@ export default function Card({ id, nome, imagem }) {
             }
 
             arquivos.forEach(arquivo => {
-                baixar(`/api/baixar${arquivo.nome}`)
+                baixar(`/api/baixar/${arquivo.nome}`)
             });
         } catch (error) {
             console.error("Erro ao baixar arquivos:", error);
