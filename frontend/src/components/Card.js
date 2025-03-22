@@ -3,24 +3,30 @@ import axios from "axios";
 
 export default function Card({ id, nome, imagem }) {
 
-    async function baixar(link) {
-        try {
-            const response = await fetch(link);
-            if (!response.ok) throw new Error('Erro ao baixar o arquivo');
-            const blob = await response.blob();
-      
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = link.split('/').pop() || 'download';
-            document.body.appendChild(a);
-            a.click();
-            a.remove();
-            window.URL.revokeObjectURL(url);
-          } catch (error) {
-            alert('Erro ao baixar o arquivo:', error);
-          }
-    }
+    // async function baixar(link) {
+    //     try {
+    //         const response = await fetch(link);
+    //         if (!response.ok) throw new Error('Erro ao baixar o arquivo');
+    
+    //         const blob = await response.blob();
+    //         const contentType = response.headers.get("content-type");
+    
+    //         // Verificar se é um arquivo ZIP e ajustar o nome do download
+    //         const isZip = contentType && contentType.includes("application/zip");
+    //         const fileName = link.split('/').pop() || (isZip ? 'arquivo.zip' : 'download');
+    
+    //         const url = window.URL.createObjectURL(blob);
+    //         const a = document.createElement('a');
+    //         a.href = url;
+    //         a.download = fileName;
+    //         document.body.appendChild(a);
+    //         a.click();
+    //         a.remove();
+    //         window.URL.revokeObjectURL(url);
+    //     } catch (error) {
+    //         alert('Erro ao baixar o arquivo: ' + error.message);
+    //     }
+    // }
 
 
     const handleDownload = async () => {
@@ -34,7 +40,8 @@ export default function Card({ id, nome, imagem }) {
             }
 
             arquivos.forEach(arquivo => {
-                baixar(`/api/baixar/${arquivo.nome}`)
+                window.open(`/api/baixar/${arquivo.nome}`);
+                //baixar(`/api/baixar/${arquivo.nome}`)
             });
         } catch (error) {
             console.error("Erro ao baixar arquivos:", error);
@@ -48,7 +55,7 @@ export default function Card({ id, nome, imagem }) {
                 <img src={`/api/uploads/${imagem}`} className="Card-Image" draggable="false" alt={nome} />
             </div>
             <div className="Div-Card-Text">
-                <p className="Nome-Jogo"><u>{nome}</u></p>
+                <p className="Nome-Jogo"><u>{nome.length > 16 ? `${nome.slice(0, 14)}...` : nome}</u></p>
                 <p className="Download" onClick={handleDownload} style={{ cursor: "pointer", color: "blue" }}>
                     Download
                 </p>

@@ -20,7 +20,7 @@ app.use(cors());
 
 // Configuração do banco de dados
 const db = mysql.createConnection({
-    host: "banco",
+    host: "localhost",
     user: "root",
     password: "root",
     database: "koxs"
