@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.9e539886.css",
+    "main.js": "/static/js/main.9a8606a9.js",
+    "static/js/453.8ab44547.chunk.js": "/static/js/453.8ab44547.chunk.js",
+    "static/media/KOXS_Logo.png": "/static/media/KOXS_Logo.c32b533859a8906f042a.png",
+    "index.html": "/index.html",
+    "main.9e539886.css.map": "/static/css/main.9e539886.css.map",
+    "main.9a8606a9.js.map": "/static/js/main.9a8606a9.js.map",
+    "453.8ab44547.chunk.js.map": "/static/js/453.8ab44547.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9e539886.css",
+    "static/js/main.9a8606a9.js"
+  ]
+}
